@@ -1,4 +1,4 @@
-### Intro
+### DevFest Intro
 
 A local tech conference hosted by Google Developer Groups around the world. Whether it be through hands-on learning experiences, technical talks delivered in local languages by experts, or by simply meeting fellow local developers.
 
