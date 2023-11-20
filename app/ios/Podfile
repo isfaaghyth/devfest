@@ -1,0 +1,5 @@
+target 'ios' do
+  use_frameworks!
+  platform :ios, '16.0'
+  pod 'app', :path => '../'
+end
