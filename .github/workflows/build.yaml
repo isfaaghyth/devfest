@@ -1,0 +1,67 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build_android:
+    name: Build android
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew :app:android:assembleDebug
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: android
+          path: |
+            app/android/build/outputs/apk/debug/devfest-debug.apk
+
+  build_ios:
+    name: Build iOS
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Build with xcode
+        continue-on-error: true # TODO: Fix the certificates
+        run: |
+          cd app/ios
+          xcodebuild -project ios.xcodeproj -scheme ios

@@ -9,10 +9,11 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "1.8"
+                jvmTarget = "17"
             }
         }
     }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
