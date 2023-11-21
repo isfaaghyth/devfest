@@ -1,20 +1,20 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'app'
+    spec.name                     = 'DevFest'
     spec.version                  = '1.0'
     spec.homepage                 = 'Link to the Shared Module homepage'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Some description for the Shared Module'
-    spec.vendored_frameworks      = 'build/cocoapods/framework/app.framework'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/DevFest.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target = '16.0'
                 
                 
-    if !Dir.exist?('build/cocoapods/framework/app.framework') || Dir.empty?('build/cocoapods/framework/app.framework')
+    if !Dir.exist?('build/cocoapods/framework/DevFest.framework') || Dir.empty?('build/cocoapods/framework/DevFest.framework')
         raise "
 
-        Kotlin framework 'app' doesn't exist yet, so a proper Xcode project can't be generated.
+        Kotlin framework 'DevFest' doesn't exist yet, so a proper Xcode project can't be generated.
         'pod install' should be executed after running ':generateDummyFramework' Gradle task:
 
             ./gradlew :app:generateDummyFramework
@@ -24,12 +24,12 @@ Pod::Spec.new do |spec|
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':app',
-        'PRODUCT_MODULE_NAME' => 'app',
+        'PRODUCT_MODULE_NAME' => 'DevFest',
     }
                 
     spec.script_phases = [
         {
-            :name => 'Build app',
+            :name => 'Build DevFest',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
@@ -46,5 +46,5 @@ Pod::Spec.new do |spec|
             SCRIPT
         }
     ]
-    spec.resources = ['build/compose/ios/app/compose-resources']
+    spec.resources = ['build/compose/ios/DevFest/compose-resources']
 end
