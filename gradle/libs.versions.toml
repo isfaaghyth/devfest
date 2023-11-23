@@ -6,6 +6,7 @@ compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 compose-multiplatform = "1.5.10"
 androidx-activityCompose = "1.8.1"
+qdsfdhvh-image-loader = "1.7.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -16,6 +17,7 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 compose-multiplatform = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-multiplatform" }
+qdsfdhvh-image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "qdsfdhvh-image-loader" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
