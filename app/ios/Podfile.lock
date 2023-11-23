@@ -1,16 +1,16 @@
 PODS:
-  - app (1.0)
+  - DevFest (1.0)
 
 DEPENDENCIES:
-  - app (from `../`)
+  - DevFest (from `../`)
 
 EXTERNAL SOURCES:
-  app:
+  DevFest:
     :path: "../"
 
 SPEC CHECKSUMS:
-  app: 77adddfdf64784ed4cb3c5edc46eb18cf204329c
+  DevFest: 1f35c70f427ad8ef7292a0f8e79a1a311ba6948d
 
-PODFILE CHECKSUM: e18c6cb758bec8758cf683b28fffc86bbdab51cf
+PODFILE CHECKSUM: 45f519f5a57c25a855334da344bbb260a30ca216
 
 COCOAPODS: 1.14.3

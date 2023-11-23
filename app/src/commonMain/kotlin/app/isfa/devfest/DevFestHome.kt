@@ -28,11 +28,11 @@ fun DevFestHome() {
     val chapters by remember {
         mutableStateOf(
             listOf(
-                Chapter("1", "GDG Jakarta", "loren ipsum", "", true, listOf(Topic("1", "Android"))),
-                Chapter("2", "GDG Jogjakarta", "loren ipsum", "", false, listOf(Topic("1", "Android"), Topic("2", "Web"))),
-                Chapter("4", "GDG Jakarta", "loren ipsum", "", true, listOf(Topic("1", "Android"))),
-                Chapter("5", "GDG Jogjakarta", "loren ipsum", "", false, listOf(Topic("1", "Android"), Topic("2", "Web"))),
-                Chapter("7", "GDG Jakarta", "loren ipsum", "", true, listOf(Topic("1", "Android"))),
+                Chapter("1", "GDG Jakarta", "loren ipsum", "https://sessionize.com/image/89eb-1140o400o3-PkzPudtsjdko7XtuMTpS9e.png", true, listOf(Topic("1", "Android"))),
+                Chapter("2", "GDG Jogjakarta", "loren ipsum", "https://sessionize.com/image/89eb-1140o400o3-PkzPudtsjdko7XtuMTpS9e.png", false, listOf(Topic("1", "Android"), Topic("2", "Web"))),
+                Chapter("4", "GDG Jakarta", "loren ipsum", "https://sessionize.com/image/89eb-1140o400o3-PkzPudtsjdko7XtuMTpS9e.png", true, listOf(Topic("1", "Android"))),
+                Chapter("5", "GDG Jogjakarta", "loren ipsum", "https://sessionize.com/image/89eb-1140o400o3-PkzPudtsjdko7XtuMTpS9e.png", false, listOf(Topic("1", "Android"), Topic("2", "Web"))),
+                Chapter("7", "GDG Jakarta", "loren ipsum", "https://sessionize.com/image/89eb-1140o400o3-PkzPudtsjdko7XtuMTpS9e.png", true, listOf(Topic("1", "Android"))),
                 Chapter("8", "GDG Jogjakarta", "loren ipsum", "", false, listOf(Topic("1", "Android"), Topic("2", "Web"))),
             )
         )
