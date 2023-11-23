@@ -24,20 +24,18 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import app.isfa.devfest.data.Chapter
 import app.isfa.devfest.data.Topic
+import com.seiko.imageloader.model.ImageAction
+import com.seiko.imageloader.rememberImageSuccessPainter
+import com.seiko.imageloader.ui.AutoSizeBox
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,7 +58,7 @@ fun ChapterCard(
     ) {
         Column {
             Row {
-                // ChapterBannerImage(chapter.bannerUrl)
+                ChapterBannerImage(chapter.bannerUrl)
             }
             Box(
                 modifier = Modifier.padding(16.dp),
@@ -154,47 +152,38 @@ fun ChapterTopic(
     }
 }
 
-//@Composable
-//fun ChapterBannerImage(
-//    headerImageUrl: String?,
-//) {
-//    var isLoading by remember { mutableStateOf(true) }
-//    var isError by remember { mutableStateOf(false) }
-//    val imageLoader = rememberAsyncImagePainter(
-//        model = headerImageUrl,
-//        onState = { state ->
-//            isLoading = state is AsyncImagePainter.State.Loading
-//            isError = state is AsyncImagePainter.State.Error
-//        },
-//    )
-//    val isLocalInspection = LocalInspectionMode.current
-//    Box(
-//        modifier = Modifier
-//            .fillMaxWidth()
-//            .height(180.dp),
-//        contentAlignment = Alignment.Center,
-//    ) {
-//        if (isLoading) {
-//            // Display a progress bar while loading
-//            CircularProgressIndicator(
-//                modifier = Modifier
-//                    .align(Alignment.Center)
-//                    .size(80.dp),
-//                color = MaterialTheme.colorScheme.tertiary,
-//            )
-//        }
-//
-//        Image(
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .height(180.dp),
-//            contentScale = ContentScale.Crop,
-//            painter = if (isError.not() && !isLocalInspection) {
-//                imageLoader
-//            } else {
-//                painterResource(drawable.ic_placeholder_default)
-//            },
-//            contentDescription = null, // decorative image,
-//        )
-//    }
-//}
+@Composable
+fun ChapterBannerImage(headerImageUrl: String?) {
+    if (headerImageUrl.isNullOrEmpty()) return
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(180.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        AutoSizeBox(url = headerImageUrl) { action ->
+            when (action) {
+                is ImageAction.Success -> {
+                    Image(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(180.dp),
+                        contentScale = ContentScale.Crop,
+                        painter = rememberImageSuccessPainter(action),
+                        contentDescription = null, // decorative image,
+                    )
+                }
+                is ImageAction.Loading -> {
+                    CircularProgressIndicator(
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .size(80.dp),
+                        color = MaterialTheme.colorScheme.tertiary,
+                    )
+                }
+                is ImageAction.Failure -> {} // TODO: Placeholder
+            }
+        }
+    }
+}
