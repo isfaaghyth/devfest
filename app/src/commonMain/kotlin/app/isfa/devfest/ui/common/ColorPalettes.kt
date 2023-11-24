@@ -1,4 +1,4 @@
-package app.isfa.devfest.common
+package app.isfa.devfest.ui.common
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

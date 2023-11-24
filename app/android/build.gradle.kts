@@ -40,6 +40,12 @@ android {
 
 dependencies {
     implementation(projects.app)
+
+    // Decompose
+    implementation(libs.decompose)
+    implementation(libs.decompose.router)
+
+    // Compose
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)

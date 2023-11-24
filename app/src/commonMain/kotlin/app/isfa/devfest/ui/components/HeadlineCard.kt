@@ -1,4 +1,4 @@
-package app.isfa.devfest.components
+package app.isfa.devfest.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,7 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun WelcomeWordingCard(current: String) {
+fun HeadlineCard(current: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth()

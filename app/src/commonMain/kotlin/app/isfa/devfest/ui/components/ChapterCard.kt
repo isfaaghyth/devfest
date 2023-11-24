@@ -1,4 +1,4 @@
-package app.isfa.devfest.components
+package app.isfa.devfest.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.horizontalScroll
@@ -68,10 +68,8 @@ fun ChapterCard(
                     Row {
                         ChapterTitle(
                             chapter.name,
-                            modifier = Modifier.fillMaxWidth((.8f)),
+                            modifier = Modifier.fillMaxWidth(),
                         )
-                        // Spacer(modifier = Modifier.weight(1f))
-                        // FollowButton(isBookmarked, onToggleBookmark)
                     }
                     Spacer(modifier = Modifier.height(12.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {

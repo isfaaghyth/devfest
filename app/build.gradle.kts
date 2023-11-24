@@ -28,17 +28,34 @@ kotlin {
         framework {
             baseName = "DevFest"
             isStatic = true
+
+            export(libs.decompose.router)
         }
     }
     
     sourceSets {
+        androidMain.dependencies {
+            api(libs.common.koin.android)
+        }
         commonMain.dependencies {
+            // Coroutines
+            implementation(libs.coroutines.core)
+
+            // Compose
             implementation(compose.ui)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
 
+            // Decompose
+            api(libs.decompose.router)
+            implementation(libs.decompose)
+            implementation(libs.decompose.compose.multiplatform)
+
+            // Utilities
             implementation(libs.qdsfdhvh.image.loader)
+            implementation(libs.common.koin)
+            implementation(libs.common.parcelable)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
