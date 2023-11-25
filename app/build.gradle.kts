@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
+    id("kotlin-parcelize")
 }
 
 kotlin {
@@ -47,6 +48,9 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.material3)
 
+            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+            implementation(compose.components.resources)
+
             // Decompose
             api(libs.decompose.router)
             implementation(libs.decompose)
@@ -72,5 +76,10 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+    sourceSets {
+        named("main") {
+            resources.srcDir("src/commonMain/resources")
+        }
     }
 }
