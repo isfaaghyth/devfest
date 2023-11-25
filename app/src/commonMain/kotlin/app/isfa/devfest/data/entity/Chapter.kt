@@ -1,4 +1,4 @@
-package app.isfa.devfest.data
+package app.isfa.devfest.data.entity
 
 import com.arkivanov.essenty.parcelable.Parcelable
 import com.arkivanov.essenty.parcelable.Parcelize

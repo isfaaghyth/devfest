@@ -15,7 +15,6 @@ fun DetailScreen(
     title: String,
     onBack: () -> Unit
 ) {
-
     Box(
         modifier = Modifier
             .fillMaxSize()

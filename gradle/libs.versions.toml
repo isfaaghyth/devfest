@@ -10,11 +10,14 @@ compose-material3 = "1.1.2"
 compose-multiplatform = "1.5.10"
 androidx-activityCompose = "1.8.1"
 qdsfdhvh-image-loader = "1.7.1"
+datetime = "0.4.0"
 decompose = "2.1.0-compose-experimental"
 decompose-router = "0.5.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }

@@ -15,8 +15,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import app.isfa.devfest.DevFestApp
 import app.isfa.devfest.ui.common.DarkColorPalette
 import app.isfa.devfest.ui.common.LightColorPalette
-import app.isfa.devfest.ui.common.PlatformConfig
-import app.isfa.devfest.ui.common.PlatformConfigProvider
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.RouterContext
@@ -27,12 +25,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette
-            val platform = PlatformConfig(isDarkTheme = isSystemInDarkTheme())
             val router = defaultRouterContext()
 
             CompositionLocalProvider(
-                LocalRouterContext provides defaultRouterContext(),
-                PlatformConfigProvider provides platform
+                LocalRouterContext provides defaultRouterContext()
             ) {
                 MaterialTheme(
                     colorScheme = colors
@@ -51,8 +47,6 @@ class MainActivity : ComponentActivity() {
 
 @Preview(name = "Light Mode", showBackground = true)
 @Preview(name = "Dark Mode", uiMode = UI_MODE_NIGHT_YES, showBackground = true)
-@Preview(name = "Full Preview", showSystemUi = true)
-@Preview(name = "Foldable", device = "spec:width=673dp,height=841dp")
 @Composable
 private fun DevFestHomePreview() {
     val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette

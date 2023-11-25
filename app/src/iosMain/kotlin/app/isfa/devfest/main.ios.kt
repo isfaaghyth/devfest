@@ -11,18 +11,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.ComposeUIViewController
 import app.isfa.devfest.ui.common.DarkColorPalette
 import app.isfa.devfest.ui.common.LightColorPalette
-import app.isfa.devfest.ui.common.PlatformConfig
-import app.isfa.devfest.ui.common.PlatformConfigProvider
 import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.RouterContext
 
 fun MainViewController(routerContext: RouterContext) = ComposeUIViewController {
     val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette
-    val platform = PlatformConfig(isDarkTheme = isSystemInDarkTheme())
 
     CompositionLocalProvider(
-        LocalRouterContext provides routerContext,
-        PlatformConfigProvider provides platform
+        LocalRouterContext provides routerContext
     ) {
         MaterialTheme(
             colorScheme = colors
@@ -31,7 +27,7 @@ fun MainViewController(routerContext: RouterContext) = ComposeUIViewController {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colorScheme.background
             ) {
-                DevFestApp(isSystemInDarkTheme())
+                DevFestApp()
             }
         }
     }

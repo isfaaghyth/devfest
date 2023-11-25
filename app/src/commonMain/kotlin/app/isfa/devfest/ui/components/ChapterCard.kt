@@ -31,8 +31,8 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import app.isfa.devfest.data.Chapter
-import app.isfa.devfest.data.Topic
+import app.isfa.devfest.data.entity.Chapter
+import app.isfa.devfest.data.entity.Topic
 import com.seiko.imageloader.model.ImageAction
 import com.seiko.imageloader.rememberImageSuccessPainter
 import com.seiko.imageloader.ui.AutoSizeBox
@@ -53,7 +53,7 @@ fun ChapterCard(
         modifier = modifier
             .fillMaxWidth()
             .semantics {
-                onClick(label = "XXX", action = null)
+                onClick(label = chapter.name, action = null)
             },
     ) {
         Column {
@@ -72,10 +72,6 @@ fun ChapterCard(
                         )
                     }
                     Spacer(modifier = Modifier.height(12.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        // NewsResourceMetaData(userNewsResource.publishDate, userNewsResource.type)
-                    }
-                    Spacer(modifier = Modifier.height(12.dp))
                     ChapterOverviewDescription(chapter.content)
                     Spacer(modifier = Modifier.height(12.dp))
                     ChapterTopicList(
@@ -88,18 +84,13 @@ fun ChapterCard(
 }
 
 @Composable
-fun ChapterTitle(
-    newsResourceTitle: String,
-    modifier: Modifier = Modifier,
-) {
-    Text(newsResourceTitle, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
+fun ChapterTitle(title: String, modifier: Modifier = Modifier) {
+    Text(title, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
 }
 
 @Composable
-fun ChapterOverviewDescription(
-    newsResourceShortDescription: String,
-) {
-    Text(newsResourceShortDescription, style = MaterialTheme.typography.bodyLarge)
+fun ChapterOverviewDescription(description: String) {
+    Text(description, style = MaterialTheme.typography.bodyLarge)
 }
 
 @Composable

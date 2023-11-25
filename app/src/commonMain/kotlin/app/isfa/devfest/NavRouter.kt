@@ -7,6 +7,5 @@ import com.arkivanov.essenty.parcelable.Parcelize
 sealed class NavRouter : Parcelable {
 
     data object Home : NavRouter()
-
     data class Detail(val title: String) : NavRouter()
 }

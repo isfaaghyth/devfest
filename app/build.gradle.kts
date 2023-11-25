@@ -57,6 +57,7 @@ kotlin {
             implementation(libs.decompose.compose.multiplatform)
 
             // Utilities
+            implementation(libs.kotlin.datetime)
             implementation(libs.qdsfdhvh.image.loader)
             implementation(libs.common.koin)
             implementation(libs.common.parcelable)

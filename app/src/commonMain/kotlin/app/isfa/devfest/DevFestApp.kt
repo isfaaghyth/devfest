@@ -29,12 +29,8 @@ fun DevFestApp() {
         )
     ) { screen ->
         when (screen) {
-            is NavRouter.Home -> HomeScreen {
-                router.push(NavRouter.Detail("Hi!!!"))
-            }
-            is NavRouter.Detail -> DetailScreen(screen.title) {
-                router.pop()
-            }
+            is NavRouter.Home -> HomeScreen { router.push(NavRouter.Detail("Hi!!!")) }
+            is NavRouter.Detail -> DetailScreen(screen.title) { router.pop() }
         }
     }
 }
