@@ -36,6 +36,7 @@ kotlin {
     
     sourceSets {
         androidMain.dependencies {
+            implementation(libs.androidx.compose.windowsizeclass)
             api(libs.common.koin.android)
         }
         commonMain.dependencies {

@@ -4,6 +4,7 @@ kotlin = "1.9.20"
 coroutines = "1.7.3"
 essenty = "1.1.0"
 koin = "3.2.0"
+androidx-compose-material3 = "1.1.2"
 compose = "1.5.4"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
@@ -15,6 +16,8 @@ decompose = "2.1.0-compose-experimental"
 decompose-router = "0.5.1"
 
 [libraries]
+androidx-compose-windowsizeclass = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "androidx-compose-material3" }
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
 
