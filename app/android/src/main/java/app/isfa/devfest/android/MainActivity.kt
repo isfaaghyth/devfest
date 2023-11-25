@@ -15,7 +15,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import app.isfa.devfest.DevFestApp
 import app.isfa.devfest.ui.common.DarkColorPalette
 import app.isfa.devfest.ui.common.LightColorPalette
+import app.isfa.devfest.ui.common.PlatformConfig
+import app.isfa.devfest.ui.common.PlatformConfigProvider
+import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import io.github.xxfast.decompose.router.LocalRouterContext
+import io.github.xxfast.decompose.router.RouterContext
 import io.github.xxfast.decompose.router.defaultRouterContext
 
 class MainActivity : ComponentActivity() {
@@ -23,9 +27,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette
+            val platform = PlatformConfig(isDarkTheme = isSystemInDarkTheme())
+            val router = defaultRouterContext()
 
             CompositionLocalProvider(
-                LocalRouterContext provides defaultRouterContext()
+                LocalRouterContext provides defaultRouterContext(),
+                PlatformConfigProvider provides platform
             ) {
                 MaterialTheme(
                     colorScheme = colors
@@ -50,14 +57,18 @@ class MainActivity : ComponentActivity() {
 private fun DevFestHomePreview() {
     val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette
 
-    MaterialTheme(
-        colorScheme = colors
+    CompositionLocalProvider(
+        LocalRouterContext provides RouterContext(LifecycleRegistry())
     ) {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
+        MaterialTheme(
+            colorScheme = colors
         ) {
-            DevFestApp()
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.background
+            ) {
+                DevFestApp()
+            }
         }
     }
 }
