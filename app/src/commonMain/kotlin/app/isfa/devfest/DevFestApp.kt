@@ -9,7 +9,6 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.slid
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.push
-import com.arkivanov.essenty.backhandler.BackHandler
 import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.Router
 import io.github.xxfast.decompose.router.content.RoutedContent
@@ -29,8 +28,8 @@ fun DevFestApp() {
         )
     ) { screen ->
         when (screen) {
-            is NavRouter.Home -> HomeScreen { router.push(NavRouter.Detail("Hi!!!")) }
-            is NavRouter.Detail -> DetailScreen(screen.title) { router.pop() }
+            is NavRouter.Home -> HomeScreen { router.push(NavRouter.Detail(it)) }
+            is NavRouter.Detail -> DetailScreen(screen.chapter) { router.pop() }
         }
     }
 }

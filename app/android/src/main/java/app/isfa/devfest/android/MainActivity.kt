@@ -12,9 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import app.isfa.devfest.DevFestApp
 import app.isfa.devfest.ui.common.DarkColorPalette
 import app.isfa.devfest.ui.common.LightColorPalette
+import app.isfa.devfest.androidx.compose.material3.windowsizeclass.LocalWindowSizeClass
+import app.isfa.devfest.androidx.compose.material3.windowsizeclass.WindowSizeClass
+import app.isfa.devfest.androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.RouterContext
@@ -23,12 +27,17 @@ import io.github.xxfast.decompose.router.defaultRouterContext
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val routerContext: RouterContext = defaultRouterContext()
+
         setContent {
             val colors = if (isSystemInDarkTheme()) DarkColorPalette else LightColorPalette
-            val router = defaultRouterContext()
+            val windowSizeClass: WindowSizeClass = calculateWindowSizeClass(this)
 
             CompositionLocalProvider(
-                LocalRouterContext provides defaultRouterContext()
+                LocalRouterContext provides routerContext,
+                LocalWindowSizeClass provides windowSizeClass,
             ) {
                 MaterialTheme(
                     colorScheme = colors

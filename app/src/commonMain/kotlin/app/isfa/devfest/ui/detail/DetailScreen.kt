@@ -9,10 +9,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import app.isfa.devfest.data.entity.Chapter
 
 @Composable
 fun DetailScreen(
-    title: String,
+    chapter: Chapter,
     onBack: () -> Unit
 ) {
     Box(
@@ -24,7 +25,7 @@ fun DetailScreen(
             }
     ) {
         Text(
-            text = title,
+            text = chapter.name,
             modifier = Modifier
                 .align(Alignment.Center)
 
