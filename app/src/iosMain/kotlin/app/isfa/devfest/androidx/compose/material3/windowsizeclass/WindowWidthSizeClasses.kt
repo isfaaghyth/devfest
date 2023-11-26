@@ -1,7 +1,5 @@
 package app.isfa.devfest.androidx.compose.material3.windowsizeclass
 
-import app.isfa.devfest.androidx.compose.material3.windowsizeclass.CommonWindowWidthSizeClass
-
 actual typealias WindowWidthSizeClass = CommonWindowWidthSizeClass
 
 actual object WindowWidthSizeClasses {
