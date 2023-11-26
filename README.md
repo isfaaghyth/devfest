@@ -20,3 +20,6 @@ This project is designed differently compared to the official KMP project. I got
 - MockKMP
 - MobiusKt
 - Coroutines Flow
+
+### Inspired
+xxfast/NYTimes-KMP
