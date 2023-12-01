@@ -12,4 +12,13 @@ data class Organizer(
     @SerialName("is_wtm") val isWtm: Boolean? = false,
     @SerialName("name") val name: String,
     @SerialName("role") val role: Int
-) : Parcelable
+) : Parcelable {
+
+    fun roleName(): String {
+        return when (role) {
+            0 -> "Lead"
+            1 -> "Co-Lead"
+            else -> "Core Team"
+        }
+    }
+}
