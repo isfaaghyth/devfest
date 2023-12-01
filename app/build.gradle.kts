@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.kotlinSerialization)
     id("kotlin-parcelize")
 }
 
@@ -57,8 +58,12 @@ kotlin {
             implementation(libs.decompose)
             implementation(libs.decompose.compose.multiplatform)
 
-            // Utilities
+            // Kotlinx
             implementation(libs.kotlin.datetime)
+            implementation(libs.kotlin.serialization)
+            implementation(libs.kotlin.serialization.json)
+
+            // Utilities
             implementation(libs.qdsfdhvh.image.loader)
             implementation(libs.common.koin)
             implementation(libs.common.parcelable)
