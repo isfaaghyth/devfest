@@ -7,10 +7,9 @@ import kotlinx.serialization.Serializable
 
 @Parcelize
 @Serializable
-data class Chapter(
-    @SerialName("banner") val banner: String,
-    @SerialName("events") val events: List<Event>,
-    @SerialName("link") val link: String,
+data class Organizer(
+    @SerialName("avatar") val avatar: String,
+    @SerialName("is_wtm") val isWtm: Boolean? = false,
     @SerialName("name") val name: String,
-    @SerialName("organizers") val organizers: List<Organizer>
+    @SerialName("role") val role: Int
 ) : Parcelable
