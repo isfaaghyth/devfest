@@ -1,0 +1,111 @@
+{
+  "status": 200,
+  "chapters": [
+    {
+      "name": "GDG Surabaya",
+      "link": "https://gdg.community.dev/gdg-surabaya/",
+      "banner": "https://www.stts.edu/lfm/files/shares/Jurnalis/Berita/2023/230401%20-%20Google%20Developer%20Group%20Surabaya%20(GDG%20Surabaya)/foto%20pembicara.jpg",
+      "organizers": [
+        {
+          "name": "Esther Irawati Setiawan",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/esther_irawati_setiawan_Nu2jtnG.jpg",
+          "role": 0
+        },
+        {
+          "name": "Indra Maryati",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/indra_maryati.jpg",
+          "role": 0,
+          "is_wtm": true
+        },
+        {
+          "name": "Haidar Zamzam",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/haidar_zamzam_t0laCRw.jpeg",
+          "role": 1
+        },
+        {
+          "name": "Hansel Santoso",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/hansel_santoso_2aYxOxi.jpg",
+          "role": 1
+        },
+        {
+          "name": "Joan Santoso",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/joan_santoso_VGu8z5W.jpg",
+          "role": 1
+        }
+      ],
+      "events": [
+        {
+          "name": "DevFest 2023",
+          "link": "https://gdg.community.dev/events/details/google-gdg-surabaya-presents-devfest-surabaya-2023/",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/DF23-Bevy-EventThumb-Blue_IvFpxKH.png",
+          "date": "Dec 2, 2023"
+        },
+        {
+          "name": "Women in Tech Power Hour Dinner - Surabaya",
+          "link": "https://gdg.community.dev/events/details/google-gdg-cloud-surabaya-presents-women-in-tech-power-hour-dinner-surabaya/cohost-gdg-surabaya",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Women%20Techmakers%20Logo.png",
+          "date": "Dec 1, 2023"
+        },
+        {
+          "name": "#JuaraAndroid - Offline Session",
+          "link": "https://gdg.community.dev/events/details/google-gdg-surabaya-presents-juaraandroid-offline-session/",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/ja-online-event-1-icon_l1jTHXS.png",
+          "date": "Oct 28, 2023"
+        }
+      ]
+    },
+    {
+      "name": "GDG Jakarta",
+      "link": "https://gdg.community.dev/gdg-jakarta/",
+      "banner": "https://www.sinarmasland.com/app/uploads/2023/07/Foto-2-Google-IO-Extended-2023-di-Digital-Hub-BSD-City-scaled.jpg",
+      "organizers": [
+        {
+          "name": "P Adhi Nugroho",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/putranto_adhi_nugroho.jpg",
+          "role": 0
+        },
+        {
+          "name": "Anggi Maisa Hadaya",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/anggi_maisa_hadaya_TMuMGT2.jpg",
+          "role": 0,
+          "is_wtm": true
+        },
+        {
+          "name": "Muh Isfhani Ghiath",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/muh_isfhani_ghiath_b3GIjfd.jpeg",
+          "role": 1
+        },
+        {
+          "name": "Surahutomo Aziz Pradana",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/surahutomo_aziz_pradana.jpg",
+          "role": 1
+        },
+        {
+          "name": "Fachridan Tio Mu'afa",
+          "avatar": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/fachridan_tio_muafa_TQn3oVa.jpg",
+          "role": 2
+        }
+      ],
+      "events": [
+        {
+          "name": "DevFest 2023",
+          "link": "https://gdg.community.dev/events/details/google-gdg-jakarta-presents-devfest-jakarta-2023/",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/DF23-Bevy-EventThumb-Blue_IvFpxKH.png",
+          "date": "Nov 26, 2023"
+        },
+        {
+          "name": "#JuaraAndroid - Compose Camp Jakarta",
+          "link": "https://gdg.community.dev/events/details/google-gdg-jakarta-presents-juaraandroid-compose-camp-jakarta-2023/",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Logo%20Juara%20Android%20Jakarta.png",
+          "date": "Oct 28, 2023"
+        },
+        {
+          "name": "#JuaraAndroid - Online Session #7",
+          "link": "https://gdg.community.dev/events/details/google-gdg-bogor-presents-juaraandroid-online-session-7/cohost-gdg-jakarta",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/ja-online-event-7-icon.png",
+          "date": "Oct 26, 2023"
+        }
+      ]
+    }
+  ]
+}
