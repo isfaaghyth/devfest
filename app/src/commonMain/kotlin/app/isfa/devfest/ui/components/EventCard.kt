@@ -13,6 +13,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.ProvideTextStyle
@@ -25,14 +26,17 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import app.isfa.devfest.common.navigate
 import app.isfa.devfest.data.entity.Event
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventCard(
     event: Event,
     modifier: Modifier = Modifier,
 ) {
     OutlinedCard(
+        onClick = { navigate().navigateTo(event.link) },
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         modifier = modifier

@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.isfa.devfest.common.navigate
 import app.isfa.devfest.data.entity.Chapter
 import app.isfa.devfest.ui.components.EventCard
 import app.isfa.devfest.ui.components.OrganizerCard
@@ -131,7 +132,7 @@ fun ChapterTitle(name: String, bevyLink: String) {
         )
 
         Text(
-            text = "Link",
+            text = "↖ Bevy Link",
             color = MaterialTheme.colorScheme.tertiary,
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier
@@ -145,14 +146,7 @@ fun ChapterTitle(name: String, bevyLink: String) {
                         end = Offset(size.width, verticalOffset)
                     )
                 }
-                .clickable {
-                    // TODO: bevyLink's route
-                }
+                .clickable { navigate().navigateTo(bevyLink) }
         )
     }
-}
-
-@Composable
-fun EventItem() {
-
 }

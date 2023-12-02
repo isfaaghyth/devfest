@@ -19,6 +19,7 @@ import app.isfa.devfest.ui.common.LightColorPalette
 import app.isfa.devfest.androidx.compose.material3.windowsizeclass.LocalWindowSizeClass
 import app.isfa.devfest.androidx.compose.material3.windowsizeclass.WindowSizeClass
 import app.isfa.devfest.androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
+import app.isfa.devfest.common.WeakContextWrapper
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.RouterContext
@@ -29,6 +30,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
+        WeakContextWrapper.set(this)
+
         val routerContext: RouterContext = defaultRouterContext()
 
         setContent {
