@@ -70,12 +70,12 @@ fun ChapterCard(
 }
 
 @Composable
-fun ChapterTitle(title: String, modifier: Modifier = Modifier) {
+private fun ChapterTitle(title: String, modifier: Modifier = Modifier) {
     Text(title, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
 }
 
 @Composable
-fun ChapterBannerImage(headerImageUrl: String?) {
+private fun ChapterBannerImage(headerImageUrl: String?) {
     if (headerImageUrl.isNullOrEmpty()) return
 
     Box(
@@ -93,7 +93,7 @@ fun ChapterBannerImage(headerImageUrl: String?) {
                             .height(180.dp),
                         contentScale = ContentScale.Crop,
                         painter = rememberImageSuccessPainter(action),
-                        contentDescription = null, // decorative image,
+                        contentDescription = null,
                     )
                 }
                 is ImageAction.Loading -> {

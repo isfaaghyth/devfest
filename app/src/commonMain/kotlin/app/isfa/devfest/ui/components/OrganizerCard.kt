@@ -1,6 +1,7 @@
 package app.isfa.devfest.ui.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -60,7 +61,10 @@ fun OrganizerCard(organizer: Organizer) {
                         .fillMaxWidth(),
                 )
 
-                Row {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     Text(
                         text = organizer.roleName(),
                         color = MaterialTheme.colorScheme.tertiary,
@@ -88,7 +92,7 @@ fun OrganizerCard(organizer: Organizer) {
 
 
 @Composable
-fun OrganizerAvatar(url: String?) {
+private fun OrganizerAvatar(url: String?) {
     if (url.isNullOrEmpty()) return
 
     Box(
@@ -107,7 +111,7 @@ fun OrganizerAvatar(url: String?) {
                             .clip(RoundedCornerShape(8.dp)),
                         contentScale = ContentScale.Crop,
                         painter = rememberImageSuccessPainter(action),
-                        contentDescription = null, // decorative image,
+                        contentDescription = null,
                     )
                 }
                 is ImageAction.Loading -> {

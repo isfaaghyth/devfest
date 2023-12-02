@@ -7,4 +7,5 @@ plugins {
     alias(libs.plugins.kotlinCocoapods).apply(false)
     alias(libs.plugins.composeMultiplatform).apply(false)
     alias(libs.plugins.kotlinSerialization).apply(false)
+    alias(libs.plugins.kotlinParcelize).apply(false)
 }

@@ -50,13 +50,12 @@ fun EventCard(
         ) {
             Column {
                 Spacer(modifier = Modifier.height(12.dp))
-                Row {
-                    Text(
-                        text = event.name,
-                        style = MaterialTheme.typography.headlineSmall,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                }
+
+                Text(
+                    text = event.name,
+                    style = MaterialTheme.typography.headlineSmall,
+                    modifier = Modifier.fillMaxWidth(),
+                )
 
                 Spacer(modifier = Modifier.height(12.dp))
 
@@ -74,7 +73,7 @@ fun EventCard(
 }
 
 @Composable
-fun TopicList(
+private fun TopicList(
     topics: List<String>,
     modifier: Modifier = Modifier,
 ) {
@@ -98,7 +97,7 @@ fun TopicList(
 }
 
 @Composable
-fun Topic(
+private fun Topic(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     text: @Composable () -> Unit,
