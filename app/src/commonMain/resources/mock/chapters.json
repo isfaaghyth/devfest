@@ -38,19 +38,32 @@
           "name": "DevFest 2023",
           "link": "https://gdg.community.dev/events/details/google-gdg-surabaya-presents-devfest-surabaya-2023/",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/DF23-Bevy-EventThumb-Blue_IvFpxKH.png",
-          "date": "Dec 2, 2023"
+          "date": "Dec 2, 2023",
+          "topics": [
+            "Android",
+            "Flutter",
+            "Web",
+            "ML/AI"
+          ]
         },
         {
           "name": "Women in Tech Power Hour Dinner - Surabaya",
           "link": "https://gdg.community.dev/events/details/google-gdg-cloud-surabaya-presents-women-in-tech-power-hour-dinner-surabaya/cohost-gdg-surabaya",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Women%20Techmakers%20Logo.png",
-          "date": "Dec 1, 2023"
+          "date": "Dec 1, 2023",
+          "topics": [
+            "Leadership",
+            "Gathering"
+          ]
         },
         {
           "name": "#JuaraAndroid - Offline Session",
           "link": "https://gdg.community.dev/events/details/google-gdg-surabaya-presents-juaraandroid-offline-session/",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/ja-online-event-1-icon_l1jTHXS.png",
-          "date": "Oct 28, 2023"
+          "date": "Oct 28, 2023",
+          "topics": [
+            "Android"
+          ]
         }
       ]
     },
@@ -91,19 +104,31 @@
           "name": "DevFest 2023",
           "link": "https://gdg.community.dev/events/details/google-gdg-jakarta-presents-devfest-jakarta-2023/",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/DF23-Bevy-EventThumb-Blue_IvFpxKH.png",
-          "date": "Nov 26, 2023"
+          "date": "Nov 26, 2023",
+          "topics": [
+            "Android",
+            "Flutter",
+            "Web",
+            "ML/AI"
+          ]
         },
         {
           "name": "#JuaraAndroid - Compose Camp Jakarta",
           "link": "https://gdg.community.dev/events/details/google-gdg-jakarta-presents-juaraandroid-compose-camp-jakarta-2023/",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/Logo%20Juara%20Android%20Jakarta.png",
-          "date": "Oct 28, 2023"
+          "date": "Oct 28, 2023",
+          "topics": [
+            "Android"
+          ]
         },
         {
           "name": "#JuaraAndroid - Online Session #7",
           "link": "https://gdg.community.dev/events/details/google-gdg-bogor-presents-juaraandroid-online-session-7/cohost-gdg-jakarta",
           "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/ja-online-event-7-icon.png",
-          "date": "Oct 26, 2023"
+          "date": "Oct 26, 2023",
+          "topics": [
+            "Android"
+          ]
         }
       ]
     }

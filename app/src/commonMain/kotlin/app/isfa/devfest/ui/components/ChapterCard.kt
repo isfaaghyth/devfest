@@ -10,16 +10,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,9 +63,6 @@ fun ChapterCard(
                         )
                     }
                     Spacer(modifier = Modifier.height(12.dp))
-                    // ChapterOverviewDescription(chapter.content)
-                    // Spacer(modifier = Modifier.height(12.dp))
-                    // ChapterTopicList(chapters = chapter.topics)
                 }
             }
         }
@@ -79,59 +72,6 @@ fun ChapterCard(
 @Composable
 fun ChapterTitle(title: String, modifier: Modifier = Modifier) {
     Text(title, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
-}
-
-@Composable
-fun ChapterOverviewDescription(description: String) {
-    Text(description, style = MaterialTheme.typography.bodyLarge)
-}
-
-//@Composable
-//fun ChapterTopicList(
-//    chapters: List<Topic>,
-//    modifier: Modifier = Modifier,
-//) {
-//    Row(
-//        modifier = modifier.horizontalScroll(rememberScrollState()), // causes narrow chips
-//        horizontalArrangement = Arrangement.spacedBy(4.dp),
-//    ) {
-//        for (chapter in chapters) {
-//            ChapterTopic(
-//                text = {
-//                    Text(
-//                        text = chapter.name.uppercase(),
-//                        modifier = Modifier.semantics {
-//                            this.contentDescription = ""
-//                        },
-//                    )
-//                },
-//            )
-//        }
-//    }
-//}
-
-@Composable
-fun ChapterTopic(
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    text: @Composable () -> Unit,
-) {
-    Box(modifier = modifier) {
-        val containerColor = MaterialTheme.colorScheme.primaryContainer
-
-        TextButton(
-            onClick = {},
-            enabled = enabled,
-            colors = ButtonDefaults.textButtonColors(
-                containerColor = containerColor,
-                contentColor = contentColorFor(backgroundColor = containerColor)
-            ),
-        ) {
-            ProvideTextStyle(value = MaterialTheme.typography.labelSmall) {
-                text()
-            }
-        }
-    }
 }
 
 @Composable

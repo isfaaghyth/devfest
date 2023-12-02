@@ -16,7 +16,7 @@ data class Organizer(
 
     fun roleName(): String {
         return when (role) {
-            0 -> "Lead"
+            0 -> if (isWtm == false) "Lead" else "Ambassador"
             1 -> "Co-Lead"
             else -> "Core Team"
         }

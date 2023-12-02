@@ -11,5 +11,6 @@ data class Event(
     @SerialName("date") val date: String,
     @SerialName("img") val img: String,
     @SerialName("link") val link: String,
-    @SerialName("name") val name: String
+    @SerialName("name") val name: String,
+    @SerialName("topics") val topics: List<String>,
 ) : Parcelable

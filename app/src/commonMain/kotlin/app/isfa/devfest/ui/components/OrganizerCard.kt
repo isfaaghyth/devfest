@@ -63,6 +63,7 @@ fun OrganizerCard(organizer: Organizer) {
                 Row {
                     Text(
                         text = organizer.roleName(),
+                        color = MaterialTheme.colorScheme.tertiary,
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.Bold
                     )
