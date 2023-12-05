@@ -49,8 +49,6 @@ fun EventCard(
             modifier = Modifier.padding(16.dp),
         ) {
             Column {
-                Spacer(modifier = Modifier.height(12.dp))
-
                 Text(
                     text = event.name,
                     style = MaterialTheme.typography.headlineSmall,
